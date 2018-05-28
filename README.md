@@ -1,7 +1,7 @@
 ![alt text](https://github.com/britisharmy/poist/blob/master/poist.jpg)
 
 
-# Poist
+# Poist ![alt text](https://travis-ci.org/britisharmy/poist.svg?branch=master)
 An easy way to perform background job processing in your applications.
 
 # Overview
