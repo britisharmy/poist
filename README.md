@@ -15,7 +15,7 @@ Poist is a reliable application to perform backgrouund jobs. Currently it has th
 7. Makes use of Rabbit MQ and Spring AMQP
 8. Its easy to modify and use compared to other solutions such as Resque, Sidekiq, delayed_job, Celery,Quartz Scheduler,Hangfire,Gearman
 
-# Use Case
+# Use Cases
 
 ## Chat
 
