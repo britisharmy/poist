@@ -1,6 +1,8 @@
+![alt text](https://github.com/britisharmy/poist/blob/master/poist.jpg)
+
+
 # Poist
 An easy way to perform background job processing in your applications.
-
 
 # Overview
 
