@@ -21,7 +21,7 @@ Poist is a reliable application to perform backgrouund jobs. Currently it has th
 
 ## Chat
 
-Build powerful and feature-rich realtime chat apps, powered by ﬂexible APIs and a global messaging infrastructure. Cross-device and cross-platform means they work across web, iOS, Android, and the rest.
+Build powerful and feature-rich realtime chat apps. Cross-device and cross-platform means they work across web, iOS, Android, and the rest.
 
 ## IoT Device Control
 
