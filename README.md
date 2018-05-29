@@ -64,13 +64,49 @@ sudo apt-get update
 sudo apt-get install rabbitmq-server
 ```
 
+## Step 3 – Manage RabbitMQ Service
+
+After completing installations, enable the RabbitMQ service on your system. Also, start the RabbitMQ service. Use one the below methods sysvinit for older systems or systemctl for the latest operating system.
+
+Using Init –
+
+```
+sudo update-rc.d rabbitmq-server defaults
+sudo service rabbitmq-server start
+sudo service rabbitmq-server stop
+```
+
+Using Systemctl –
+
+```
+sudo systemctl enable rabbitmq-server
+sudo systemctl start rabbitmq-server
+sudo systemctl stop rabbitmq-server
+```
+
+## Step 4 – Create Admin User in RabbitMQ
 
 
+By default rabbitmq creates a user named “guest” with password “guest”. You can also create your own administrator account on RabbitMQ server using following commands. Change password with your own password.
+
+```
+sudo rabbitmqctl add_user admin password 
+sudo rabbitmqctl set_user_tags admin administrator
+sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+```
+
+## Step 5 – Setup RabbitMQ Web Management Console
 
 
+RabbitMQ also provides and web management console for managing the entire RabbitMQ. To enable web management console run following command on your system. The web management console helps you for managing RabbitMQ server.
 
-Install Mysql (this is only needed to demonstrate how to connect to any database that is supported by Hibernate ORM)
+```
+sudo rabbitmq-plugins enable rabbitmq_management
+```
 
+RabbitMQ dashboard starts on port 15672. Access your server on the port to get dashboard. Use the username and password created in step 4
+
+## Step 6 - Install Stomp Plugins
 
 Install the stomp plugin https://www.rabbitmq.com/stomp.html using this command
 
@@ -92,11 +128,21 @@ Check if you have the plugins using this command
 rabbitmq-plugins list
 ```
 
-Once you have all the plugins,simply clone poist
+
+Install Mysql (this is only needed to demonstrate how to connect to any database that is supported by Hibernate ORM)
+
+```
+sudo apt-get install mysql-server
+```
+
+Once you have installed everything,simply clone poist 
 
 ```
 git clone https://github.com/britisharmy/poist.git
 ```
+
+and adjust your database connection details here https://github.com/britisharmy/poist/blob/master/amqp/src/main/resources/application.properties
+
 
 and start poist
 
