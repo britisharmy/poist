@@ -198,3 +198,7 @@ Keep everyone, and every device realtime. From mapping, geotracking and dispatch
 ## Collaboration
 
 Build realtime collaborative tools and environments for apps that allow teams to work together better
+
+## License
+
+MIT License (c) Geoffrey 
