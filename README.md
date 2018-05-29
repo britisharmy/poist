@@ -128,6 +128,7 @@ Check if you have the plugins using this command
 rabbitmq-plugins list
 ```
 
+# Next Steps
 
 Install Mysql (this is only needed to demonstrate how to connect to any database that is supported by Hibernate ORM)
 
