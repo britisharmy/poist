@@ -17,7 +17,60 @@ Poist is a reliable application to perform backgrouund jobs. Currently it has th
 7. Makes use of Rabbit MQ and Spring AMQP
 8. Its easy to modify and use compared to other solutions such as Resque, Sidekiq, delayed_job, Celery,Quartz Scheduler,Hangfire,Gearman
 
-# Connecting
+# Using Poist
+
+Install Java JRE 
+
+```
+sudo apt-get install default-jre
+```
+
+Install Maven
+
+```
+sudo apt-get install maven
+```
+
+Install Rabbit MQ
+
+## Step 1 - Install Erlang
+
+First, use the following commands to add erlang apt repository on your system. You can simply download erlang repository package from its official website and install on your system.
+
+```
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+sudo dpkg -i erlang-solutions_1.0_all.deb
+```
+Now, you can install erlang package on your system using the following command. This will install all of its dependencies as well.
+
+```
+sudo apt-get update
+sudo apt-get install erlang erlang-nox
+```
+
+## Step 2 – Install RabbitMQ Server
+
+After installing requirements, now enable RabbitMQ apt repository on your system. Also you need to import rabbitmq signing key on your system. Use the following commands to do this.
+
+```
+echo 'deb http://www.rabbitmq.com/debian/ testing main' | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
+```
+
+After that update apt cache and install RabbitMQ server on your system.
+
+```
+sudo apt-get update
+sudo apt-get install rabbitmq-server
+```
+
+
+
+
+
+
+Install Mysql (this is only needed to demonstrate how to connect to any database that is supported by Hibernate ORM)
+
 
 Install the stomp plugin https://www.rabbitmq.com/stomp.html using this command
 
@@ -43,7 +96,6 @@ Once you have all the plugins,simply clone poist
 
 ```
 git clone https://github.com/britisharmy/poist.git
-
 ```
 
 and start poist
