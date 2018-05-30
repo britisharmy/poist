@@ -138,7 +138,7 @@ sudo apt-get install mysql-server
 Install Mysql driver for java
 
 ```
-apt-get install libmysql-java
+sudo apt-get install libmysql-java
 ```
 
 Once you have installed everything,simply clone poist 
