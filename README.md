@@ -135,6 +135,11 @@ Install Mysql (this is only needed to demonstrate how to connect to any database
 ```
 sudo apt-get install mysql-server
 ```
+Install Mysql driver for java
+
+```
+apt-get install libmysql-java
+```
 
 Once you have installed everything,simply clone poist 
 
