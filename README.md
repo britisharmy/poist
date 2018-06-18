@@ -156,6 +156,8 @@ and start poist
 mvn jetty:run
 ```
 
+You can learn how to use poist with codeigniter here https://github.com/britisharmy/codeigniter-poist
+
 and connect to poist using the code below.
 
 ```
